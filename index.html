@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Memory-Game</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://kit.fontawesome.com/5e4200ec36.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!--OVERLAY 1 2 3 WIN/LOOSE SCREANS-->
+    <div id="start" class="overlay-text visible">
+        <p class="neon">MEMORY GAME</p>
+        <div>
+            <button class="easy-start">easy</button>
+            <button class="medium-start">medium</button>
+            <button class="master-start">master</button>
+        </div>
+    </div>
+    <div id="game-over" class="overlay-text">
+        <p class="neon-over">GAME OVER</p>
+        <button class="try-again end" data-btn="2">try again</button>
+    </div>
+    <div id="victory" class="overlay-text">
+        <p class="neon-win">YOU ARE A WINNER</p>
+        <p class="small">CONGRATULATIONS</p>
+        <button class="try-again" data-btn="1">try again</button>
+    </div>
+    <!--OVERLAY 1 2 3 WIN/LOOSE SCREANS-->
+    <div class="wrapp-container">
+        <!--first board with cards-->
+        <div class="cards-table">
+            <div class="card " data-id="1">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front one" src="img/1.png" />
+            </div>
+            <div class="card" data-id="1">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front one" src="img/1.png" />
+            </div>
+            <div class="card" data-id="2">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front" src="img/2.png" />
+            </div>
+            <div class="card" data-id="2">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front" src="img/2.png" />
+            </div>
+            <div class="card" data-id="3">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front" src="img/3.png" />
+            </div>
+            <div class="card" data-id="3">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front" src="img/3.png" />
+            </div>
+            <div class="card" data-id="4">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front five" src="img/4.png" />
+            </div>
+            <div class="card" data-id="4">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front  five" src="img/4.png" />
+            </div>
+            <div class="card" data-id="5">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front three" src="img/5.png" />
+            </div>
+            <div class="card" data-id="5">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front three" src="img/5.png" />
+            </div>
+            <div class="card" data-id="6">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front one" src="img/6.png" />
+            </div>
+            <div class="card" data-id="6">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front one" src="img/6.png" />
+            </div>
+            <div class="card" data-id="7">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front" src="img/7.png" />
+            </div>
+            <div class="card" data-id="7">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front" src="img/7.png" />
+            </div>
+            <div class="card" data-id="8">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front four" src="img/8.png" />
+            </div>
+            <div class="card" data-id="8">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front four" src="img/8.png" />
+            </div>
+            <div class="card" data-id="9">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front three" src="img/9.png" />
+            </div>
+            <div class="card" data-id="9">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front three" src="img/9.png" />
+            </div>
+            <div class="card" data-id="10">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front two" src="img/10.png" />
+            </div>
+            <div class="card" data-id="10">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front two" src="img/10.png" />
+            </div>
+            <div class="card" data-id="11">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front two" src="img/11.png" />
+            </div>
+            <div class="card" data-id="11">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front two" src="img/11.png" />
+            </div>
+            <div class="card" data-id="12">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front four" src="img/12.png" />
+            </div>
+            <div class="card" data-id="12">
+                <img class="back" src="img/skull-after.png" />
+                <img class="front four" src="img/12.png" />
+            </div>
+        </div>
+        <div class="menu">
+            <p id="name-of-the-game" class="neon">Memory Game</p>
+            <div class="all-points">
+                <div class="game-time">
+                    moves:
+                    <div class="big" id="moves">0</div>
+                </div>
+                <div class="game-score">
+                    score:
+                    <div class="big" id="score">0</div>
+                </div>
+            </div>
+            <div class="game-level">
+                <div class="tooltip widthCorrect">
+                    <button class="easy">easy</button>
+                    <span class="tooltiptext">movements limit depends on the variable level
+                    </span>
+                </div>
+                <button class="medium">medium</button>
+                <button class="master">master</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

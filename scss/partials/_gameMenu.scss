@@ -1,0 +1,84 @@
+.menu {
+  @include flexSet;
+  // @include boardSet;
+  padding: 2%;
+  margin: auto;
+  width: 25vw;
+  min-height: 85vh;
+  @media screen and (min-width: 1024px) {
+    width: 25vw;
+    min-height: 85vh;
+  }
+  @media screen and (max-width: 1024) {
+    justify-content: center;
+  }
+  @media (max-width: 800px) {
+    display: none;
+  }
+}
+#name-of-the-game {
+  @include titleTextSet;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  margin-top: 2vh;
+  transition: all 0.5s;
+}
+.game-time,
+.game-score {
+  @include commonTextSet;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: $menuBorder;
+  width: 100%;
+  margin-top: 4vh;
+}
+.all-points {
+  width: 100%;
+  margin-top: 15%;
+}
+.game-level {
+  display: left;
+  margin-bottom: 10%;
+  margin-top: 30%;
+  // @media screen and (max-width: 1200px) {
+  //   justify-content: center;
+  //   :nth-child(1) {
+  //     margin-left: 2.5vw;
+  //   }
+  //   :nth-child(3) {
+  //     margin-left: 1.7vw;
+  //   }
+  // }
+}
+button {
+  @include commonTextSet;
+  width: 100%;
+  margin-bottom: 1.5vh;
+  font-size: 3vh;
+  padding: $buttonPadding;
+  text-decoration: none;
+  background-color: $buttonColor;
+
+  @media screen and (max-width: 1200px) {
+    display: block;
+  }
+}
+button:hover {
+  transform: scale(0.95);
+  transition: 0.1s;
+  background-color: $hoverColor;
+  animation: neon-title 2s ease-in-out infinite alternate;
+}
+.big {
+  font-size: 3.7vh;
+}
+
+.active {
+  transform: scale(0.95);
+  transition: 0.1s;
+  background-color: $hoverColor;
+  animation: neon-title 2s ease-in-out infinite alternate;
+}

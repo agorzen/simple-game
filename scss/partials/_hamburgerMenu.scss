@@ -1,0 +1,29 @@
+///hamburger menu
+///tooltip
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  font-family: "Lato", sans-serif;
+  visibility: hidden;
+  width: 20vw;
+  background-color: rgba(255, 68, 0, 0.212);
+  //   color: $hoverColor;
+  color: white;
+  text-align: center;
+  border-radius: 0.5vh;
+  padding: 2vh 2vh;
+  position: absolute;
+  right: 48%;
+  bottom: 110%;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.widthCorrect {
+  width: 100%;
+}

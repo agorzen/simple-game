@@ -1,0 +1,72 @@
+//TEXT:
+@mixin commonTextSet {
+  font-family: $textFont;
+  color: $fontColor;
+  font-size: 2vh;
+}
+@mixin titleTextSet {
+  font-family: $titleFont;
+  font-size: 7vh;
+  color: $fontColor;
+}
+//COLOR:
+@mixin gradientColor {
+  background-color: rgba(28, 87, 182, 1);
+  background: -moz-linear-gradient(
+    -45deg,
+    rgba(28, 87, 182, 1) 0%,
+    rgba(22, 73, 156, 1) 21%,
+    rgba(6, 39, 92, 1) 73%,
+    rgba(6, 39, 92, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right bottom,
+    color-stop(0%, rgba(28, 87, 182, 1)),
+    color-stop(21%, rgba(22, 73, 156, 1)),
+    color-stop(73%, rgba(6, 39, 92, 1)),
+    color-stop(100%, rgba(6, 39, 92, 1))
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    rgba(28, 87, 182, 1) 0%,
+    rgba(22, 73, 156, 1) 21%,
+    rgba(6, 39, 92, 1) 73%,
+    rgba(6, 39, 92, 1) 100%
+  );
+  background: -o-linear-gradient(
+    -45deg,
+    rgba(28, 87, 182, 1) 0%,
+    rgba(22, 73, 156, 1) 21%,
+    rgba(6, 39, 92, 1) 73%,
+    rgba(6, 39, 92, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    -45deg,
+    rgba(28, 87, 182, 1) 0%,
+    rgba(22, 73, 156, 1) 21%,
+    rgba(6, 39, 92, 1) 73%,
+    rgba(6, 39, 92, 1) 100%
+  );
+  background: linear-gradient(
+    135deg,
+    rgba(28, 87, 182, 1) 0%,
+    rgba(22, 73, 156, 1) 21%,
+    rgba(6, 39, 92, 1) 73%,
+    rgba(6, 39, 92, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c57b6', endColorstr='#06275c', GradientType=1 );
+}
+//BOARDS
+@mixin boardSet {
+  background-color: $cardstableColor;
+  border-radius: 0.5vw;
+  box-shadow: 11px 15px 9px -5px $shadowColor;
+}
+//FLEX:
+@mixin flexSet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}

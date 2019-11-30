@@ -1,0 +1,29 @@
+//-------------------background
+.wrapp-container {
+  @include flexSet;
+  justify-content: space-around;
+  padding: 4vh;
+  min-width: 100vw;
+  min-height: 100vh;
+  @include gradientColor;
+}
+//-----------------------cards-table
+.cards-table {
+  display: grid; //important!!!
+  grid-template-columns: 15vw 15vw 15vw 15vw 15vw 15vw;
+  // grid-template-columns: repeat(6, auto);
+  grid-template-rows: repeat(4, auto);
+  @include flexSet;
+  padding: 2%;
+  width: 65vw;
+  min-height: 85vh;
+  margin: auto;
+  perspective: 1000px;
+  @include boardSet;
+  @media screen and (min-width: 1024px) {
+    width: 65vw;
+  }
+  @media (max-width: 734px) {
+    width: 95vw;
+  }
+}
