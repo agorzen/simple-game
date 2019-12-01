@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   ///////////////////////////////////////////////////////////////////////////////
 
-  //buttons - overlays
+  //buttons - overlays - first view
   let overlayStart = document.getElementById("start");
   let btnEasyStart = document.querySelector(".easy-start");
   let btnEasy = document.querySelector(".easy");
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
       easyGame();
     }, 800);
   }
-  ////////////////////////////////////////////////////////////////////
+  ///
   let btnMediumStart = document.querySelector(".medium-start");
   let btnMedium = document.querySelector(".medium");
   btnMediumStart.addEventListener("click", mediumSet);
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
       mediumGame();
     }, 800);
   }
-  /////////////////////////////////////////////////////////////////////
+  ///
   let btnMasterStart = document.querySelector(".master-start");
   let btnMaster = document.querySelector(".master");
   btnMasterStart.addEventListener("click", masterSet);
@@ -50,7 +50,9 @@ document.addEventListener("DOMContentLoaded", function() {
       masterGame();
     }, 800);
   }
-  /////////////////////buttons - basic
+
+  ///////////////////////////////////////////////////////////////////////////
+  ///buttons - basic - main view
   btnEasy.addEventListener("click", easySetTwo);
 
   function easySetTwo() {
@@ -65,8 +67,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
   btnMedium.addEventListener("click", mediumSetTwo);
   function mediumSetTwo() {
-    // window.location.reload(true); ----------------------
-    // overlayStart.classList.remove("visible");
     inOrderToReplace();
     mediumGame();
     setTimeout(() => {
@@ -75,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function() {
       btnMaster.classList.remove("active");
       // randomizeImage();
     }, 100);
-    //wywołanie funkcji gry na danym poziomie
   }
   btnMaster.addEventListener("click", masterSetTwo);
   function masterSetTwo() {
