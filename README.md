@@ -6,7 +6,7 @@ Project is based on the idea of memory game (tile-matching game); There are 3 le
 
 # Play:
 
-Here will be the url of this game;
+https://agorzen.github.io/simple-game/
 
 # Controls:
 
