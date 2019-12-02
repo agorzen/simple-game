@@ -156,6 +156,7 @@ document.addEventListener("DOMContentLoaded", function() {
   imagesId[21] = "11";
   imagesId[22] = "12";
   imagesId[23] = "12";
+  console.log(imagesId);
   ///randomize function - changing the order of cards id
   function randomizeImage() {
     cards.forEach(element => {
@@ -167,6 +168,7 @@ document.addEventListener("DOMContentLoaded", function() {
       // imagesId.splice(singleImage, 1);-----tablica
     });
   }
+  console.log(imagesId);
   ////////////////////////////////////////////////////////////////////music
   const gameOverSound = new Audio(
     "music/255937__jagadamba__robot-laughing-robotic-vocal-laugh.mp3"
